@@ -92,14 +92,17 @@ while True:
         print(' '.join(display_word))
         print('\n\n')
 
+    # too many incorrect guesses
     if incorrect_guess_count >= max_incorrect_guesses:
         print('You are dead x_x')
         print('The correct word was ' + ''.join(chosen_word))
 
+    # winner!
     if correct_letter_count >= len(chosen_word):
         print(''.join(display_word))
         print('You are a Winner!')
 
+    # play again?
     inp = input('Play again? y/n: ')
     if inp == 'n':
         exit(0)
